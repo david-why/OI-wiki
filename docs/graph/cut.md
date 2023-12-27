@@ -1,4 +1,4 @@
-author: Ir1d, sshwy, GavinZhengOI, Planet6174, ouuan, Marcythm, ylxmf2005, 0xis-cn
+author: Ir1d, sshwy, GavinZhengOI, Planet6174, ouuan, Marcythm, ylxmf2005, 0xis-cn, david-why
 
 相关阅读：[双连通分量](./bcc.md)，
 
@@ -111,6 +111,7 @@ low[u] = min(low[u], dfn[v]);
     father = [0] * MAXN
     
     def tarjan(u, fa):
+        global dfs_clock, cnt_bridge
         father[u] = fa
         low[u] = dfn[u] = dfs_clock
         dfs_clock = dfs_clock + 1
